@@ -1,5 +1,7 @@
 <?php
 $city = 'Tokyo';
+$country = 'Japan';
+$established = 1868;
 ?>
 <!DOCTYPE html>
 <html>
@@ -13,7 +15,9 @@ $city = 'Tokyo';
       <div class="sidebar">
         <div class="info">
           <ul>
-            <li> <?php echo $city; ?> </li>
+            <li><?php echo $city; ?></li>
+            <li>Country: <?php echo $country; ?></li>
+            <li>Established:  <?php echo $established; ?></li>
           </ul>
         </div>
         <div class="details">
