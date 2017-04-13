@@ -1,7 +1,8 @@
 <?php
-$cities = array('dc', 'london', 'moscow');
-print_r($cities);
-$cities[] = 'tokyo';
+$cities = array('tokyo' => 13.6,
+               'dc' => 0.6,
+               'moscow' => 11.5);
+$cities['london'] = 8.6;
 ?>
 <!DOCTYPE html>
 <html>
@@ -15,12 +16,15 @@ $cities[] = 'tokyo';
       <div class="sidebar">
         <div class="info">
           <ul>
-            <li><?php echo $cities[1]; ?></li>
+            <li><?php echo "Population: $cities['tokyo'] million"; ?></li>
+            <li><?php echo "Population: $cities['dc'] million"; ?></li>
+            <li><?php echo "Population: $cities['moscow'] million"; ?></li>
+            <li><?php echo "Population: $cities['london'] million"; ?></li>
           </ul>
         </div>
         <div class="details">
           <p>
-
+            
           </p>
         </div>
       </div>
