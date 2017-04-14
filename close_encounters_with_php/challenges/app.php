@@ -6,5 +6,5 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
   echo $name . "<br>";
   echo $date . "<br>";
-  echo $reason;
+  echo htmlspecialchars($reason);
 }
