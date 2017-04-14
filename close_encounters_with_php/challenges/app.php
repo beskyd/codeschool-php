@@ -1,10 +1,10 @@
 <?php
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-  $name = $_POST['name'];
-  $date = $_POST['date'];
-  $reason = $_POST['reason'];
+  $name = trim($_POST['name']);
+  $date = trim($_POST['date']);
+  $reason = trim($_POST['reason']);
 
-  echo $name;
-  echo $date;
+  echo $name . "<br>";
+  echo $date . "<br>";
   echo $reason;
 }
