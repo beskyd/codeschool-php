@@ -5,6 +5,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   $reason = trim($_POST['reason']);
 
   echo $name . "<br>";
-  echo $date . "<br>";
-  echo htmlspecialchars($reason);
+  if ($time = strtotime($date)) {
+    echo date('m d Y', $time);
+  }
+  echo "<br>" . htmlspecialchars($reason);
 }
