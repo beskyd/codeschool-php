@@ -1,13 +1,5 @@
 <?php
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-  $name = $_POST['name'];
-  $date = $_POST['date'];
-  $reason = $_POST['reason'];
-
-  echo $name;
-  echo $date;
-  echo $reason;
-}
+require 'app.php'
 ?>
 <!DOCTYPE html>
 <html>
@@ -19,7 +11,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   </head>
   <body>
     <div class="content">
-      <?php include('content.php'); ?>
+      <?php include 'content.php'; 	
+      ?>
     </div>
   </body>
 </html>
