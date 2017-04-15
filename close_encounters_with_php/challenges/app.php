@@ -14,7 +14,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   $dateValidator = Validator::notEmpty()->date();
 
   try {
-    
+    $dateValidator->assert($date);
+    echo date('m d Y', strtotime($date));
   } catch (NestedValidationException $e) {
-    
+    foreach ($e->getMessages() as $message) {
+      echo $message;
+    }
   }
+
+  echo htmlspecialchars($reason);
+}
