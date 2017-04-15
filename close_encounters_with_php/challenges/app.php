@@ -1,5 +1,7 @@
 <?php
-require __DIR__ . '/validation.php';
+require __DIR__ . '/vendor/autoload.php';
+use Respect\Validation\Validator;
+require 'validation.php';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   $name = trim($_POST['name']);
