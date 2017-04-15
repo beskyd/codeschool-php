@@ -1,9 +1,5 @@
 <?php
-function validate_date($date_raw) {
-  if ($time = strtotime($date_raw)) {
-    return date('m d y', $time);
-  }
-}
+require __dir__ . '/validation.php';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   $name = trim($_POST['name']);
@@ -11,8 +7,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   $reason = trim($_POST['reason']);
 
   echo $name . "<br>";
-
-  echo validate_date($date);
-
-  echo "<br>" . htmlspecialchars($reason);
+  echo validate_date($date) . "<br>";
+  echo htmlspecialchars($reason);
 }
