@@ -1,0 +1,1 @@
+[16-Apr-2017 12:15:12 UTC] PHP Parse error:  syntax error, unexpected '' (T_ENCAPSED_AND_WHITESPACE), expecting identifier (T_STRING) or variable (T_VARIABLE) or number (T_NUM_STRING) in /home/ubuntu/workspace/codeschool/build-badge-viewer-php/index.php on line 18

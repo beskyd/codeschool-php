@@ -13,6 +13,10 @@ $courses = $json_data['courses']['completed'];
     <title><?php echo $json_data['user']['username']; ?>'s badges</title>
   </head>
   <body>
-    
+    <?php 
+    foreach ($courses as $course) {
+      echo '<p>' . $course["title"] . '</p>';
+    }
+    ?>
   </body>
 </html>
