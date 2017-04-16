@@ -16,7 +16,8 @@ $courses = $json_data['courses']['completed'];
     <?php 
     foreach ($courses as $course) {
       echo '<div>';
-      echo '<a href="' . $course['url'] . '">' . $course["title"] . '</a>';
+      echo '<img src="' . $course["badge"] . '">';
+      echo '<a href="' . $course["url"] . '">' . $course["title"] . '</a>';
       echo '</div>';
     }
     ?>
