@@ -15,13 +15,22 @@ $courses = $json_data['courses']['completed'];
     <link rel="stylesheet" href="/css/grid.css" media="screen" title="no title" charset="utf-8">
   </head>
   <body>
-    <?php 
-    foreach ($courses as $course) {
-      echo '<div>';
-      echo '<img src="' . $course["badge"] . '">';
-      echo '<a href="' . $course["url"] . '">' . $course["title"] . '</a>';
-      echo '</div>';
-    }
-    ?>
+    <header>
+      <h1>Badger</h1>
+    </header>
+    <div class="container">
+      <h2>Courses User has completed</h2>
+      <div class="grid">
+        <?php 
+        foreach ($courses as $course) {
+          echo '<div class="grid-cell">';
+          echo '<img height="200px" src="' . $course["badge"] . '"/><br>';
+          echo '<a href="' . $course["url"] . '">' . $course["title"] . '</a>';
+          echo '</div>';
+        }
+        ?>
+      </div>
+    </div>
+    
   </body>
 </html>
