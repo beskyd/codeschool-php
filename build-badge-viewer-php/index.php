@@ -19,7 +19,7 @@ $courses = $json_data['courses']['completed'];
       <h1>Badger</h1>
     </header>
     <div class="container">
-      <h2>Courses User has completed</h2>
+      <h2>Courses <?php echo $json_data['user']['username']; ?> has completed</h2>
       <div class="grid">
         <?php 
         foreach ($courses as $course) {
