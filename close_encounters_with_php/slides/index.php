@@ -1,10 +1,13 @@
 <?php 
 //check if the server request method is POST
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $date = $_POST['date'];
+    $email = $_POST['email'];
+    $description = $_POST['description'];
     //Echo each item in POST
-    echo $_POST['date'];
-    echo $_POST['email'];
-    echo $_POST['desc'];
+    echo "<p>Date: $date</p>";
+    echo "<p>Email: $email</p>";
+    echo "<p>$description</p>";
 }
 ?>
 
@@ -13,8 +16,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <html lang="en">
     <head>
         <meta charset="utf-8">
-        <title></title>
-        <link rel="stylesheet" href="" type="text/css" />
+        <title>PHP Demo</title>
+        <meta content="width=device-width, initial-scale=1" name="viewport">
+        <link rel="stylesheet" href="css/application.css" type="text/css" />
     </head>
     <body>
         
