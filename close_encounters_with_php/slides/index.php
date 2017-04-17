@@ -1,8 +1,11 @@
 <?php 
-//Echo each item in POST
-echo $_POST['date'];
-echo $_POST['email'];
-echo $_POST['desc'];
+//check if the server request method is POST
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    //Echo each item in POST
+    echo $_POST['date'];
+    echo $_POST['email'];
+    echo $_POST['desc'];
+}
 ?>
 
 
