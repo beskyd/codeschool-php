@@ -5,7 +5,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $email = $_POST['email'];
     $description = $_POST['description'];
     //Echo each item in POST
-    echo "<p>Date: $date</p>";
+    if (!empty($date)) {
+        echo "<p>Date: $date</p>";
+    }
     echo "<p>Email: $email</p>";
     echo "<p>$description</p>";
 }
