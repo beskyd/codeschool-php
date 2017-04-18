@@ -8,7 +8,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if (!empty($date) && !empty($email) && !empty($description)) {
         echo "<p>Date: $date</p>";
         echo "<p>Email: $email</p>";
-        echo "<p>$description</p>";
+        echo '<p>' . htmlspecialchars($description) . '</p>';
     }
 }
 ?>
