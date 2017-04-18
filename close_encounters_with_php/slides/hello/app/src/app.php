@@ -6,7 +6,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $description = trim($_POST['description']);
     //Echo each item in POST
     if (!empty($date) && !empty($email) && !empty($description)) {
-        echo "<p>Date: $date</p>";
+        //strtotime will convert most any date to a Unix timestamp
+        if ($time = strtotime($date)) {
+            echo "<p>Date: date('F jS Y', $time)</p>";
+        }
         //filter_var checks a variable against a filter and returns TRUE if it passes
         if (filter_var($email, FILTER_VALIDATE_EMAIL)) {
             echo "<p>Email: $email</p>";
