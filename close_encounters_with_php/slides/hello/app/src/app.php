@@ -1,4 +1,5 @@
 <?php 
+require __DIR__ . '/../../vendor/autoload.php';
 require __DIR__ . '/validation.php';
 
 //check if the server request method is POST
