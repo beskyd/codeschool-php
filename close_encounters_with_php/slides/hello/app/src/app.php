@@ -1,4 +1,5 @@
 <?php 
+//The autoload.php file will automatically give us access to all of the packages within the Composer vendor directory.
 require __DIR__ . '/../../vendor/autoload.php';
 require __DIR__ . '/validation.php';
 

@@ -1,4 +1,8 @@
 <?php
+use Respect\Validation\Validator
+
+$v = new Validator;
+
 function validate_date($date_string) 
 {
     //strtotime will convert most any date to a Unix timestamp
