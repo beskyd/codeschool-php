@@ -1,5 +1,5 @@
 <?php
-use Respect\Validation\Validator
+use Respect\Validation\Validator;
 
 $v = new Validator;
 
