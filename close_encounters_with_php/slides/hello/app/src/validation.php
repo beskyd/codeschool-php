@@ -9,7 +9,7 @@ $v = new Validator;
 function validate_date($date_string) 
 {
     $date_validator = Validator::date('d-m-Y')->notEmpty();
-    try:
+    try {
         $date_validator->assert($date_string);
         //strtotime will convert most any date to a Unix timestamp
         $date_time = strtotime($date_string);
