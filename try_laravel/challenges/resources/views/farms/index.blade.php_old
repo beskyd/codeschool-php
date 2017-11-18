@@ -1,0 +1,6 @@
+<h1>Farms</h1>
+<ul>
+  @foreach ($farms as $farm)
+      <li> {{ $farm->name }} </li>
+  @endforeach
+</ul>
